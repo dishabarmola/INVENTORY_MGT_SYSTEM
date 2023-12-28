@@ -3,7 +3,9 @@ import time
 import os
 
 def proceed_to_login():
-    os.system("start login.py")
+    os.system("start loginpage.py")
+
+    
 def flash_label(color_index):
     colors = ['#FF0000', '#00FF00', '#0000FF']  # List of colors to flash
     welcome_label.config(fg=colors[color_index])
@@ -16,20 +18,20 @@ root = tk.Tk()
 root.title("Inventory Management System")
 root.geometry("900x150")
 
-# Configure background color and font styles
+
 root.configure(bg="#f0f0f0")
 welcome_font = ("Helvetica", 24, "bold")
 button_font = ("Arial", 12)
 
-# Create a label with a welcome message
+
 welcome_label = tk.Label(root, text="Welcome to the Inventory Management System!", font=welcome_font, bg="#f0f0f0")
 welcome_label.pack(pady=30)
 
-# Create a button to proceed to login
+
 proceed_button = tk.Button(root, text="Proceed", command=proceed_to_login, font=button_font)
 proceed_button.pack(pady=10)
 
-# Run the flashing animation automatically when the window is opened
+
 flash_label(0)
 
 root.mainloop()
