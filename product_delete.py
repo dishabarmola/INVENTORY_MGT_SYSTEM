@@ -24,7 +24,7 @@ def delete():
 
 root = tk.Tk()
 root.title("DELETE PAGE")
-root["bg"]="black"
+
 root.geometry("400x150")
 
 
